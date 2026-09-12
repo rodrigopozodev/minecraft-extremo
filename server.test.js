@@ -20,7 +20,7 @@ test('shared counts, timestamps, retries, validation and persistence', async () 
     const state = () => fetch(base + '/api/state').then(r => r.json());
     const post = (player, id) => fetch(base + '/api/deaths', { method: 'POST', body: JSON.stringify({ player, id }) });
     let initial = await state();
-    assert.deepEqual(initial.players, ['Degryh', 'David', 'Dani', 'Alexus', 'Pablo']);
+    assert.deepEqual(initial.players, ['Degryh', 'David', 'Dani', 'Alexus', 'Pablo', 'Castillo']);
     assert.deepEqual(initial.events.map(e => e.player).sort(), ['Alexus', 'David', 'Degryh']);
     assert.ok(initial.events.every(e => e.at === null));
     assert.equal((await fetch(base)).status, 200);

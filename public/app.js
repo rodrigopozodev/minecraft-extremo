@@ -1,4 +1,4 @@
-const palette = ['#b9bf8a', '#9cb8d0', '#d6ae79', '#ba9ccb', '#94b99a'];
+const palette = ['#b9bf8a', '#9cb8d0', '#d6ae79', '#ba9ccb', '#94b99a', '#cf9687'];
 const pending = new Map();
 let state;
 let toastTimer;

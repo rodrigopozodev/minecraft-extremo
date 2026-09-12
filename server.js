@@ -3,7 +3,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { randomUUID } = require('node:crypto');
 
-const players = ['Degryh', 'David', 'Dani', 'Alexus', 'Pablo'];
+const players = ['Degryh', 'David', 'Dani', 'Alexus', 'Pablo', 'Castillo'];
 const dataDir = process.env.DATA_DIR || path.join(__dirname, 'data');
 fs.mkdirSync(dataDir, { recursive: true });
 const file = path.join(dataDir, 'deaths.json');
