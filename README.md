@@ -1,5 +1,16 @@
 # Minecraft Extremo
 
+## Docker
+
+Construye la imagen y arranca el servidor con un volumen persistente:
+
+```sh
+docker build -t minecraft-extremo .
+docker run -d --name minecraft-extremo --restart unless-stopped -p 3000:3000 -v minecraft-extremo-data:/app/data minecraft-extremo
+```
+
+Abre http://localhost:3000. El volumen `minecraft-extremo-data` conserva las muertes al sustituir el contenedor; reutiliza ese mismo volumen. La imagen no incluye los registros locales: un volumen nuevo empieza con las tres muertes iniciales. El servidor se ejecuta como usuario sin privilegios.
+
 Ejecuta `npm start` y abre http://localhost:3000. Requiere Node.js 22 o posterior y no necesita instalar dependencias.
 
 Para entrar desde otros dispositivos de la misma red, utiliza `http://IP-DEL-EQUIPO:3000`. Para acceder por Internet, aloja este servidor Node en un servicio con almacenamiento persistente y configura su URL pública. Todos deben usar el mismo servidor para compartir el registro. Cualquier visitante puede añadir muertes, sin iniciar sesión.
