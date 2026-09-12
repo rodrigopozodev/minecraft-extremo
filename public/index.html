@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111511"><title>Extremo · Registro de muertes</title>
+  <link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script>
+</head>
+<body>
+  <header><a class="brand" href="/"><span class="block-logo">E</span> EXTREMO<span class="edition">MINECRAFT / SUPERVIVENCIA</span></a><span id="connection" class="connection">Conectando…</span></header>
+  <main>
+    <section class="hero"><div><p class="eyebrow">EL MUNDO NO PERDONA</p><h1>Cada vida cuenta.<br><span>Cada muerte queda.</span></h1><p class="intro">Cinco jugadores. Un mundo extremo. El registro de las veces<br class="desktop"> que la supervivencia no salió según lo previsto.</p></div><div class="hardcore" aria-hidden="true"><span>♥</span><small>HARDCORE</small><i>RESPAWN. REPEAT.</i></div></section>
+    <section class="stats" aria-label="Resumen"><div><span>MUERTES TOTALES</span><strong id="total">—</strong></div><div><span>EN LA PARTIDA</span><strong>5 <small>jugadores</small></strong></div><div><span>SIN CAÍDAS</span><strong id="survivors">—</strong></div><div><span>ÚLTIMA MUERTE</span><strong id="last" class="last">—</strong></div></section>
+    <section class="players-section"><div class="section-heading"><h2><span>01 /</span> Los jugadores</h2><p>Pulsa para registrar una muerte</p></div><div id="players" class="players"></div></section>
+    <section class="history-section"><div class="section-heading"><h2><span>02 /</span> Registro de muertes</h2><label class="select-wrap">Orden <select id="order"><option value="desc">Más recientes primero</option><option value="asc">Más antiguas primero</option></select></label></div><div class="history"><div class="table-scroll"><table><thead><tr><th>#</th><th>JUGADOR</th><th>EVENTO</th><th>FECHA</th><th>HORA · MADRID</th></tr></thead><tbody id="events"></tbody></table></div><div class="table-foot"><span id="records">Cargando registro…</span><span><i></i> Cada clic deja su huella</span></div></div><p class="note">Las muertes iniciales no tienen fecha ni hora. Las nuevas se registran automáticamente al pulsar el botón.</p></section>
+    <footer><span class="footer-brand">EXTREMO<span> / </span> EL ARCHIVO DE LOS CAÍDOS</span><span>Buena suerte ahí fuera. La vas a necesitar.</span></footer>
+  </main><div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
